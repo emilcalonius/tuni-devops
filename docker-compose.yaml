@@ -1,0 +1,21 @@
+# Version is not required on newer versions of docker compose and should be removed
+version: "3.8"
+services:
+  service1:
+    build: ./service1
+    ports:
+      - "8199:8199"
+    depends_on:
+      - service2
+    environment:
+      SERVICE2_IP: service2
+      SERVICE2_PORT: 3000
+    networks:
+      - exercise1
+  service2:
+    build: ./service2
+    networks:
+      - exercise1
+networks:
+  exercise1:
+    driver: bridge
