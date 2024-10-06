@@ -1,0 +1,13 @@
+$ docker container ls
+
+CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+eb369397dcc6   tuni-devops-service1   "service1"               7 seconds ago   Up 6 seconds   0.0.0.0:8199->8199/tcp, :::8199->8199/tcp   tuni-devops-service1-1
+71bf6171fc9c   tuni-devops-service2   "docker-entrypoint.s…"   7 seconds ago   Up 7 seconds                                               tuni-devops-service2-1
+
+$ docker network ls
+
+NETWORK ID     NAME                    DRIVER    SCOPE
+b8a429d1c318   bridge                  bridge    local
+bb63dd2b9cc4   host                    host      local
+087c1dacd12c   none                    null      local
+5954c2b2edea   tuni-devops_exercise1   bridge    local
