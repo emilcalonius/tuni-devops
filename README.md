@@ -9,7 +9,7 @@ services that are started up and stopped together.
 
 ## Usage
 
-To build and start the containers, test they are working correctly, and lastly close the containers, run the following commands:
+To build and start the containers and network, test they are working correctly, and finally remove the containers and network, run the following commands:
 
 ```bash
 $ git clone -b exercise1 https://github.com/emilcalonius/tuni-devops.git
