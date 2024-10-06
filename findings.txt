@@ -1,0 +1,13 @@
+All the Docker containers share the host’s kernel and the computational power of the host’s hardware. 
+Sharing the kernel makes Docker containers more lightweight and faster than traditional virtual machines 
+that need to have a copy of their own kernel.
+
+Docker images can share data on the host machine by creating volumes that are mapped to a directory on the host’s file system. 
+This way data can be shared between multiple containers and the data persists even after the container is stopped.
+
+The Docker containers can also share the host’s networking namespace, meaning that they do not get their own IP-address allocated, 
+but use the host’s IP-address. Using the Docker ‘host’ network behaves as if the process inside the container was running directly on the host. 
+In other words, there is no isolation in networking sense, but it is simpler and more performant. 
+For example, if we had a container that was bound to port 8199, it would be available on the host’s IP-address on port 8199 without needing to expose 
+port 8199 explicitly. In the exercise 1 I opted to use the ‘bridge’ network instead as only one of the two services was supposed to be reachable and 
+we only had one port that needed to be exposed.
