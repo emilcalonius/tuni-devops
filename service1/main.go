@@ -86,7 +86,7 @@ func executeCommand(commands ...string) string {
 	return str
 }
 
-// Get time sinco last boot by checking first process start time
+// Get time since last boot by checking first process start time
 func getTimeSinceLastBoot() string {
 	out := executeCommand("stat", "/proc/1")
 	date := strings.Split(out, "Change: ")[1]

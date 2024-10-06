@@ -36,6 +36,11 @@ async function executeCommand(command) {
   })
 }
 
+/**
+ * Get time since last boot by checking first process start time
+ *
+ * @returns {Promise<string>} string representing the hours, minutes, and seconds since last reboot
+ */
 async function getTimeSinceLastBoot() {
   const out = await executeCommand('stat /proc/1')
   const bootTime = new Date(out.split('Change: ')[1].split('.')[0])
