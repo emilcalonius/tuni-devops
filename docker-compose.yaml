@@ -1,4 +1,5 @@
-# Version is not required on newer versions of docker compose and should be removed
+# Version is deprecated on newer versions of docker compose and 
+# should be removed, but I'll keep it for compatibility just in case
 version: "3.8"
 services:
   service1:

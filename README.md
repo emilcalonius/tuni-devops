@@ -16,7 +16,7 @@ $ git clone -b exercise1 https://github.com/emilcalonius/tuni-devops.git
 $ cd tuni-devops
 $ docker compose up –-build -d # Wait for all containers to start
 $ curl localhost:8199
-$ docker-compose down
+$ docker compose down
 ```
 
 # Author
